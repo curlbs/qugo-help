@@ -27,7 +27,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          routeBasePath: '/',
+          routeBasePath: '/docs',
         },
         blog: false,
         theme: {
@@ -51,6 +51,11 @@ const config: Config = {
       },
       items: [
         {
+          to: '/docs',
+          label: 'Документация',
+          position: 'left',
+        },
+        {
           href: 'https://qugo.ru',
           label: 'qugo.ru',
           position: 'right',
@@ -68,10 +73,10 @@ const config: Config = {
         {
           title: 'Документация',
           items: [
-            {label: 'Настройка кабинета', to: '/category/nastroyka-kabineta'},
-            {label: 'Приглашение исполнителей', to: '/category/priglashenie-ispolniteley'},
-            {label: 'Задания и выплаты', to: '/category/zadaniya-i-vyplaty'},
-            {label: 'Документы и финансы', to: '/category/dokumenty-i-finansy'},
+            {label: 'Настройка кабинета', to: '/docs/category/nastroyka-kabineta'},
+            {label: 'Приглашение исполнителей', to: '/docs/category/priglashenie-ispolniteley'},
+            {label: 'Задания и выплаты', to: '/docs/category/zadaniya-i-vyplaty'},
+            {label: 'Документы и финансы', to: '/docs/category/dokumenty-i-finansy'},
           ],
         },
         {

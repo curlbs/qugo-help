@@ -2,6 +2,7 @@
 sidebar_position: 1
 slug: /
 title: Руководство пользователя
+hide_title: false
 ---
 
 # База знаний Qugo
