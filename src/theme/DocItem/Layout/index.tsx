@@ -49,15 +49,12 @@ function SidebarTOC() {
   }
 
   return createPortal(
-    <div className="sidebarToc">
-      <div className="sidebarToc__title">На этой странице</div>
-      <TOCItems
-        toc={toc}
-        className="sidebarToc__list"
-        linkClassName="sidebarToc__link"
-        linkActiveClassName="sidebarToc__link--active"
-      />
-    </div>,
+    <TOCItems
+      toc={toc}
+      className="sidebarToc__list"
+      linkClassName="sidebarToc__link"
+      linkActiveClassName="sidebarToc__link--active"
+    />,
     slot,
   );
 }
