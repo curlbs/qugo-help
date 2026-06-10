@@ -1,0 +1,9 @@
+{
+  "label": "Задания и выплаты",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "slug": "/category/zadaniya-i-vyplaty",
+    "description": "Создавайте задания и проводите выплаты исполнителям по номеру счёта или карты."
+  }
+}

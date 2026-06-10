@@ -1,0 +1,9 @@
+{
+  "label": "Документы и финансы",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "slug": "/category/dokumenty-i-finansy",
+    "description": "Пополнение баланса, отчёты о движении средств и закрывающие документы."
+  }
+}
