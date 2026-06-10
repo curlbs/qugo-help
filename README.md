@@ -1,41 +1,60 @@
-# Website
+# База знаний Qugo
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Документация для клиентов платформы Qugo на [Docusaurus](https://docusaurus.io/).
 
-## Installation
+## Как редактировать контент
 
-```bash
-yarn
+Все статьи — обычные Markdown-файлы в папке `docs/`:
+
+```
+docs/
+├── intro.md                      # Главная страница
+├── nastroyka-kabineta/           # Раздел 1
+├── priglashenie-ispolniteley/    # Раздел 2
+├── zadaniya-i-vyplaty/           # Раздел 3
+└── dokumenty-i-finansy/          # Раздел 4
 ```
 
-## Local Development
+Чтобы изменить статью — откройте нужный `.md` файл и отредактируйте текст.
+Чтобы добавить новую — создайте `.md` файл в нужной папке с заголовком:
 
-```bash
-yarn start
+```markdown
+---
+sidebar_position: 6
+title: Название статьи
+---
+
+# Заголовок
+
+Текст статьи...
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## Как добавить скриншоты
 
-## Build
+1. Положите изображение в `static/img/`.
+2. Вставьте в статью: `![Описание](/img/имя-файла.png)`
 
-```bash
-yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
+## Локальный запуск
 
 ```bash
-USE_SSH=true yarn deploy
+npm start          # запустить сайт на localhost:3000
+npm run build      # собрать production-версию (проверяет ссылки)
 ```
 
-Not using SSH:
+## Деплой
 
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
+### Vercel (рекомендуется)
+1. Залейте репозиторий на GitHub.
+2. Импортируйте проект в [Vercel](https://vercel.com).
+3. Vercel сам определит Docusaurus. Нажмите Deploy.
+4. В настройках проекта добавьте домен `help.qugo.ru`.
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+### Кастомный домен
+1. В панели хостинга добавьте домен `help.qugo.ru`.
+2. В DNS Qugo добавьте CNAME-запись на адрес хостинга.
+
+## Настройка брендинга
+
+- **Цвета** — `src/css/custom.css` (основной цвет `#249D55`)
+- **Логотип** — `static/img/logo.svg`
+- **Название, футер, ссылки** — `docusaurus.config.ts`
