@@ -37,6 +37,15 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [{from: '/docs', to: '/'}],
+      },
+    ],
+  ],
+
   themeConfig: {
     image: 'img/qugo-social-card.jpg',
     colorMode: {
@@ -50,11 +59,6 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        {
-          to: '/docs',
-          label: 'Документация',
-          position: 'left',
-        },
         {
           href: 'https://qugo.ru',
           label: 'qugo.ru',

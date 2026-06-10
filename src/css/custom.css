@@ -157,3 +157,50 @@ article img {
 .footer {
   --ifm-footer-background-color: #1a1d1b;
 }
+
+/* ============ Оглавление страницы внутри левого сайдбара ============ */
+.sidebarToc {
+  margin: 12px 8px 4px;
+  padding-top: 16px;
+  border-top: 1px solid var(--ifm-toc-border-color, #ececec);
+}
+.sidebarToc__title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--qugo-gray-text);
+  padding: 0 8px 8px;
+}
+.sidebarToc__list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: 0.85rem;
+}
+.sidebarToc__list ul {
+  list-style: none;
+  padding-left: 12px;
+  margin: 0;
+}
+.sidebarToc__link {
+  display: block;
+  padding: 5px 8px;
+  border-radius: 8px;
+  color: var(--ifm-color-emphasis-700);
+  text-decoration: none;
+  line-height: 1.35;
+  border-left: 2px solid transparent;
+  transition: background 0.15s, color 0.15s;
+}
+.sidebarToc__link:hover {
+  background: rgba(36, 158, 85, 0.07);
+  color: var(--qugo-green);
+  text-decoration: none;
+}
+.sidebarToc__link--active {
+  color: var(--qugo-green);
+  font-weight: 600;
+  background: rgba(36, 158, 85, 0.1);
+  border-left-color: var(--qugo-green);
+}

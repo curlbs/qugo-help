@@ -34,7 +34,7 @@ function Hero() {
         <p className={styles.heroSubtitle}>
           Пошаговые инструкции по всем функциям платформы — от регистрации до закрывающих документов
         </p>
-        <Link className={styles.heroButton} to="/docs">
+        <Link className={styles.heroButton} to="/docs/category/nastroyka-kabineta">
           Открыть руководство
         </Link>
       </div>
