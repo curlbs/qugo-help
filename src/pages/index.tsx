@@ -5,22 +5,28 @@ import styles from './index.module.css';
 
 const sections = [
   {
-    img: '/img/benefits_1.png',
-    title: 'Настройка кабинета',
-    text: 'Регистрация, доступ для сотрудников, стоп-лист и ЭДО с исполнителями.',
+    num: '1',
+    title: 'Настройка личного кабинета',
+    text: 'Регистрация, доступ для сотрудников, стоп-лист исполнителей и работа с ЭДО.',
     to: '/docs/category/nastroyka-kabineta',
   },
   {
-    img: '/img/benefits_2.png',
+    num: '2',
     title: 'Приглашение исполнителей',
-    text: 'Четыре способа пригласить исполнителей на платформу.',
+    text: 'Четыре способа пригласить исполнителей на платформу — выбирайте подходящий.',
     to: '/docs/category/priglashenie-ispolniteley',
   },
   {
-    img: '/img/benefits_3.png',
-    title: 'Задания и документы',
-    text: 'Формирование заданий, выплаты, баланс и закрывающие документы.',
+    num: '3',
+    title: 'Задания и выплаты',
+    text: 'Формирование заданий, оплата, арбитраж и мгновенные выплаты исполнителям.',
     to: '/docs/category/zadaniya-i-vyplaty',
+  },
+  {
+    num: '4',
+    title: 'Документы и финансы',
+    text: 'Пополнение баланса, отчёты о движении средств и закрывающие документы.',
+    to: '/docs/category/dokumenty-i-finansy',
   },
 ];
 
@@ -34,24 +40,23 @@ function Hero() {
         <p className={styles.heroSubtitle}>
           Пошаговые инструкции по всем функциям платформы — от регистрации до закрывающих документов
         </p>
-        <Link className={styles.heroButton} to="/docs/category/nastroyka-kabineta">
-          Открыть руководство
-        </Link>
       </div>
     </section>
   );
 }
 
-function Cards() {
+function Sections() {
   return (
     <section className={styles.cardsSection}>
-      <h2 className={styles.sectionTitle}>С чего начать</h2>
+      <h2 className={styles.sectionTitle}>Разделы базы знаний</h2>
       <div className={styles.cards}>
         {sections.map((s) => (
-          <Link key={s.title} to={s.to} className={styles.card}>
-            <img src={s.img} alt={s.title} className={styles.cardImg} />
-            <h3 className={styles.cardTitle}>{s.title}</h3>
-            <p className={styles.cardText}>{s.text}</p>
+          <Link key={s.num} to={s.to} className={styles.card}>
+            <div className={styles.cardNum}>{s.num}</div>
+            <div className={styles.cardBody}>
+              <h3 className={styles.cardTitle}>{s.title}</h3>
+              <p className={styles.cardText}>{s.text}</p>
+            </div>
           </Link>
         ))}
       </div>
@@ -82,7 +87,7 @@ export default function Home(): JSX.Element {
       description="Руководство пользователя платформы Qugo для работы с самозанятыми, физлицами и ИП">
       <main>
         <Hero />
-        <Cards />
+        <Sections />
         <Support />
       </main>
     </Layout>
