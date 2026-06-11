@@ -1,66 +1,44 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './index.module.css';
 
 const sections = [
   {
-    num: '1',
-    title: 'Настройка личного кабинета',
-    text: 'Регистрация, доступ для сотрудников, стоп-лист исполнителей и работа с ЭДО.',
+    img: '/img/benefits_2.png',
+    title: 'Настройка кабинета',
+    text: 'Регистрация, доступ сотрудникам, стоп-лист и ЭДО.',
     to: '/docs/category/nastroyka-kabineta',
   },
   {
-    num: '2',
+    img: '/img/benefits_1.png',
     title: 'Приглашение исполнителей',
-    text: 'Четыре способа пригласить исполнителей на платформу — выбирайте подходящий.',
+    text: 'Четыре способа пригласить исполнителей.',
     to: '/docs/category/priglashenie-ispolniteley',
   },
   {
-    num: '3',
+    img: '/img/benefits_2.png',
     title: 'Задания и выплаты',
-    text: 'Формирование заданий, оплата, арбитраж и мгновенные выплаты исполнителям.',
+    text: 'Формирование заданий, оплата и арбитраж.',
     to: '/docs/category/zadaniya-i-vyplaty',
   },
   {
-    num: '4',
+    img: '/img/benefits_3.png',
     title: 'Документы и финансы',
-    text: 'Пополнение баланса, отчёты о движении средств и закрывающие документы.',
+    text: 'Баланс, отчёты и закрывающие документы.',
     to: '/docs/category/dokumenty-i-finansy',
   },
 ];
 
-function Hero() {
+function SectionCard({img, title, text, to}: typeof sections[number]) {
+  const src = useBaseUrl(img);
   return (
-    <section className={styles.hero}>
-      <div className={styles.heroCard}>
-        <h1 className={styles.heroTitle}>
-          База знаний <span className={styles.accent}>Qugo</span>
-        </h1>
-        <p className={styles.heroSubtitle}>
-          Пошаговые инструкции по всем функциям платформы — от регистрации до закрывающих документов
-        </p>
-      </div>
-    </section>
-  );
-}
-
-function Sections() {
-  return (
-    <section className={styles.cardsSection}>
-      <h2 className={styles.sectionTitle}>Разделы базы знаний</h2>
-      <div className={styles.cards}>
-        {sections.map((s) => (
-          <Link key={s.num} to={s.to} className={styles.card}>
-            <div className={styles.cardNum}>{s.num}</div>
-            <div className={styles.cardBody}>
-              <h3 className={styles.cardTitle}>{s.title}</h3>
-              <p className={styles.cardText}>{s.text}</p>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </section>
+    <Link to={to} className={styles.card}>
+      <img src={src} alt={title} className={styles.cardImg} />
+      <h3 className={styles.cardTitle}>{title}</h3>
+      <p className={styles.cardText}>{text}</p>
+    </Link>
   );
 }
 
@@ -86,8 +64,22 @@ export default function Home(): JSX.Element {
       title="База знаний Qugo"
       description="Руководство пользователя платформы Qugo для работы с самозанятыми, физлицами и ИП">
       <main>
-        <Hero />
-        <Sections />
+        {/* Первый экран: заголовок + 4 раздела */}
+        <section className={styles.hero}>
+          <div className={styles.heroInner}>
+            <h1 className={styles.heroTitle}>
+              База знаний <span className={styles.accent}>Qugo</span>
+            </h1>
+            <p className={styles.heroSubtitle}>
+              Пошаговые инструкции по всем функциям платформы — от регистрации до закрывающих документов
+            </p>
+            <div className={styles.cards}>
+              {sections.map((s) => (
+                <SectionCard key={s.title} {...s} />
+              ))}
+            </div>
+          </div>
+        </section>
         <Support />
       </main>
     </Layout>
