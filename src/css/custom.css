@@ -54,23 +54,56 @@
 .navbar {
   box-shadow: var(--ifm-navbar-shadow);
 }
-.navbar__title {
-  font-weight: 700;
+
+/* Скрываем иконки внешних ссылок на кнопках справа (только текст) */
+.navbar-btn svg {
+  display: none !important;
 }
 
-/* Кнопки в навбаре в стиле Qugo */
-.navbar__items--right .navbar__link[href*='lk.qugo'],
-.navbar__items--right .navbar__link[href*='registr'] {
+/* Кнопки справа в стиле qugo.ru */
+.navbar-btn {
+  border-radius: 12px;
+  padding: 9px 22px !important;
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s;
+}
+.navbar-btn--outline {
+  border: 1.5px solid var(--qugo-green);
+  color: var(--qugo-green) !important;
+  background: #fff;
+}
+.navbar-btn--outline:hover {
+  background: rgba(36, 158, 85, 0.06);
+  transform: translateY(-1px);
+}
+.navbar-btn--filled {
   background: var(--qugo-gradient);
   color: #fff !important;
-  border-radius: 10px;
-  padding: 8px 18px;
-  margin-left: 8px;
-  transition: opacity 0.2s, transform 0.2s;
+  border: 1.5px solid transparent;
+  box-shadow: 0 4px 12px rgba(36, 158, 85, 0.25);
 }
-.navbar__items--right .navbar__link[href*='lk.qugo']:hover {
-  opacity: 0.9;
+.navbar-btn--filled:hover {
   transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(36, 158, 85, 0.35);
+}
+
+/* === Главная: прозрачный навбар (фон-подложка просвечивает) + выравнивание === */
+.home-page .navbar {
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  padding: 0;
+}
+.home-page .navbar__inner {
+  max-width: 1272px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+/* На главной у кнопки «Регистрация» прозрачный фон вместо белого */
+.home-page .navbar-btn--outline {
+  background: rgba(255, 255, 255, 0.6);
 }
 
 /* ============ Заголовки с зелёным акцентом ============ */

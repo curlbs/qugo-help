@@ -50,10 +50,10 @@ const config: Config = {
     image: 'img/qugo-social-card.jpg',
     colorMode: {
       defaultMode: 'light',
-      respectPrefersColorScheme: true,
+      disableSwitch: true,
     },
     navbar: {
-      title: 'База знаний',
+      title: '',
       logo: {
         alt: 'Qugo',
         src: 'img/logo.svg',
@@ -61,13 +61,15 @@ const config: Config = {
       items: [
         {
           href: 'https://qugo.ru',
-          label: 'qugo.ru',
+          label: 'Регистрация',
           position: 'right',
+          className: 'navbar-btn navbar-btn--outline',
         },
         {
           href: 'https://lk.qugo.ru',
-          label: 'Личный кабинет',
+          label: 'Вход',
           position: 'right',
+          className: 'navbar-btn navbar-btn--filled',
         },
       ],
     },

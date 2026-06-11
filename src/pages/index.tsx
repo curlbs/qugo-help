@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -59,6 +59,12 @@ function Support() {
 }
 
 export default function Home(): JSX.Element {
+  // Класс на body включает прозрачный навбар и выравнивание только на главной
+  useEffect(() => {
+    document.body.classList.add('home-page');
+    return () => document.body.classList.remove('home-page');
+  }, []);
+
   return (
     <Layout
       title="База знаний Qugo"

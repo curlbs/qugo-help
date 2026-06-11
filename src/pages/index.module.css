@@ -1,11 +1,25 @@
 /* ===== Первый экран: заголовок + 4 раздела ===== */
 .hero {
-  background: linear-gradient(180deg, #f3fbf6 0%, rgba(243, 251, 246, 0) 70%);
-  padding: 48px 24px 56px;
+  position: relative;
+  /* Поднимаем секцию под прозрачный навбар, чтобы подложка была и на нём */
+  margin-top: calc(-1 * var(--ifm-navbar-height, 60px));
+  padding-top: calc(var(--ifm-navbar-height, 60px) + 56px);
+  padding-bottom: 64px;
+  /* Первый экран целиком — блок «Не нашли ответ» уходит за фолд */
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background-image: url('/img/hero-bg.webp');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 .heroInner {
-  max-width: 1160px;
+  max-width: 1272px;
   margin: 0 auto;
+  padding: 0 16px;
+  width: 100%;
   text-align: center;
 }
 .heroTitle {
@@ -79,22 +93,23 @@
   padding: 24px 24px 72px;
 }
 .supportInner {
-  max-width: 1160px;
+  max-width: 1272px;
   margin: 0 auto;
-  background: linear-gradient(93deg, #249e55 0%, #3bbf70 100%);
+  background: linear-gradient(308deg, #ffffff 22%, #f0f0f0 78%);
+  border: 1px solid #ececec;
   border-radius: 28px;
-  padding: 48px;
+  padding: 56px 48px;
   text-align: center;
-  color: #fff;
+  color: #2e2e2e;
 }
 .supportTitle {
-  color: #fff;
+  color: #2e2e2e;
   font-size: 1.9rem;
   font-weight: 800;
   margin-bottom: 12px;
 }
 .supportText {
-  color: rgba(255, 255, 255, 0.92);
+  color: #6a6a6a;
   font-size: 1.1rem;
   max-width: 620px;
   margin: 0 auto 24px;
@@ -102,18 +117,20 @@
 }
 .supportButton {
   display: inline-block;
-  background: #fff;
-  color: #249e55;
+  background: var(--qugo-gradient, linear-gradient(93deg, #249e55 0%, #3bbf70 100%));
+  color: #fff;
   font-weight: 600;
   font-size: 1.05rem;
   padding: 14px 34px;
   border-radius: 12px;
-  transition: transform 0.2s;
+  box-shadow: 0 6px 18px rgba(36, 158, 85, 0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 .supportButton:hover {
-  color: #249e55;
+  color: #fff;
   text-decoration: none;
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(36, 158, 85, 0.35);
 }
 
 /* ===== Адаптив ===== */
