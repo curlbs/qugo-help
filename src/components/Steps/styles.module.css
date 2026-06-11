@@ -1,0 +1,71 @@
+.steps {
+  margin: 28px 0;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  gap: 18px;
+  padding-bottom: 28px;
+}
+
+/* Вертикальная линия-коннектор между шагами */
+.step::before {
+  content: '';
+  position: absolute;
+  left: 17px;
+  top: 38px;
+  bottom: 0;
+  width: 2px;
+  background: var(--ifm-color-emphasis-200);
+}
+.step:last-child::before {
+  display: none;
+}
+
+.num {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #249e55 0%, #3bbf70 100%);
+  box-shadow: 0 4px 10px rgba(36, 158, 85, 0.3);
+  z-index: 1;
+}
+
+.body {
+  flex: 1;
+  min-width: 0;
+  padding-top: 4px;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+
+.content > :last-child {
+  margin-bottom: 0;
+}
+
+/* Скриншоты внутри шага — рамка «окна браузера» */
+.content img {
+  display: block;
+  margin: 14px 0 4px;
+  max-width: 100%;
+  border: 1px solid #e3e3e3;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+}
+
+[data-theme='dark'] .content img {
+  border-color: #333;
+}
