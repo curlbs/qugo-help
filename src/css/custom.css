@@ -89,17 +89,29 @@
   box-shadow: 0 6px 16px rgba(36, 158, 85, 0.35);
 }
 
-/* === Главная: прозрачный навбар (фон-подложка просвечивает) + выравнивание === */
+/* === Единый контейнер: логотип над сайдбаром на всех страницах === */
+.navbar {
+  padding-left: 0;
+  padding-right: 0;
+}
+.navbar__inner {
+  max-width: 1272px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+/* Раскладка документации в том же контейнере — сайдбар начинается под логотипом */
+[class*='docRoot_'] {
+  max-width: 1272px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+/* === Главная: прозрачный навбар (фон-подложка просвечивает) === */
 .home-page .navbar {
   background: transparent;
   box-shadow: none;
   backdrop-filter: none;
-  padding: 0;
-}
-.home-page .navbar__inner {
-  max-width: 1272px;
-  margin: 0 auto;
-  padding: 0 16px;
 }
 /* На главной у кнопки «Регистрация» прозрачный фон вместо белого */
 .home-page .navbar-btn--outline {
