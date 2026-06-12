@@ -16,7 +16,7 @@
   background-repeat: no-repeat;
 }
 .heroInner {
-  max-width: 1272px;
+  max-width: var(--qugo-content-max, 1360px);
   margin: 0 auto;
   padding: 0 16px;
   width: 100%;
@@ -93,7 +93,7 @@
   padding: 24px 24px 72px;
 }
 .supportInner {
-  max-width: 1272px;
+  max-width: var(--qugo-content-max, 1360px);
   margin: 0 auto;
   background: linear-gradient(308deg, #ffffff 22%, #f0f0f0 78%);
   border: 1px solid #ececec;

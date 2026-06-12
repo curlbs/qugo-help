@@ -21,6 +21,24 @@ const config: Config = {
     locales: ['ru'],
   },
 
+  // Надёжная загрузка шрифта Inter на весь сайт
+  stylesheets: [
+    {
+      href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap',
+      type: 'text/css',
+    },
+  ],
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {rel: 'preconnect', href: 'https://fonts.googleapis.com'},
+    },
+    {
+      tagName: 'link',
+      attributes: {rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous'},
+    },
+  ],
+
   presets: [
     [
       'classic',
@@ -60,14 +78,14 @@ const config: Config = {
       },
       items: [
         {
-          href: 'https://qugo.ru',
-          label: 'Регистрация',
+          href: 'https://qugo.ru/',
+          label: 'Qugo.ru',
           position: 'right',
           className: 'navbar-btn navbar-btn--outline',
         },
         {
-          href: 'https://lk.qugo.ru',
-          label: 'Вход',
+          href: 'https://qugo.ru/app/authorization',
+          label: 'Личный кабинет',
           position: 'right',
           className: 'navbar-btn navbar-btn--filled',
         },

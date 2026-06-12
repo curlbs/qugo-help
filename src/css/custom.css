@@ -3,8 +3,6 @@
    Шрифт Inter, фирменные цвета и градиенты
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
 :root {
   /* Фирменные цвета Qugo */
   --qugo-green: #249E55;
@@ -13,6 +11,9 @@
   --qugo-card-gradient: linear-gradient(308deg, #FFFFFF 22.03%, #F6F6F6 78.08%);
   --qugo-gray-bg: #F6F6F6;
   --qugo-gray-text: #727272;
+
+  /* Максимальная ширина контента (единая для навбара, главной и документации) */
+  --qugo-content-max: 1360px;
 
   /* Infima переопределения */
   --ifm-color-primary: #249E55;
@@ -24,17 +25,32 @@
   --ifm-color-primary-lightest: #54cc83;
 
   --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --ifm-heading-font-family: 'Inter', sans-serif;
+  --ifm-heading-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --ifm-heading-font-weight: 700;
   --ifm-code-font-size: 95%;
   --ifm-background-color: #ffffff;
 
   --ifm-navbar-background-color: #ffffff;
   --ifm-navbar-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  /* Выше навбар → больше воздуха над и под логотипом */
+  --ifm-navbar-height: 84px;
   --ifm-card-border-radius: 16px;
   --ifm-global-radius: 12px;
 
   --docusaurus-highlighted-code-line-bg: rgba(36, 158, 85, 0.1);
+}
+
+/* Inter на всём сайте, включая элементы вне Infima */
+html,
+body,
+button,
+input,
+select,
+textarea,
+.navbar,
+.menu,
+.markdown {
+  font-family: var(--ifm-font-family-base);
 }
 
 [data-theme='dark'] {
@@ -72,10 +88,10 @@
 .navbar-btn--outline {
   border: 1.5px solid var(--qugo-green);
   color: var(--qugo-green) !important;
-  background: #fff;
+  background: transparent;
 }
 .navbar-btn--outline:hover {
-  background: rgba(36, 158, 85, 0.06);
+  background: rgba(36, 158, 85, 0.08);
   transform: translateY(-1px);
 }
 .navbar-btn--filled {
@@ -95,15 +111,16 @@
   padding-right: 0;
 }
 .navbar__inner {
-  max-width: 1272px;
+  max-width: var(--qugo-content-max);
   margin: 0 auto;
   padding: 0 16px;
 }
-/* Раскладка документации в том же контейнере — сайдбар начинается под логотипом */
+/* Раскладка документации в том же контейнере — сайдбар начинается под логотипом.
+   padding-top увеличивает отступ от черты навбара до контента и сайдбара */
 [class*='docRoot_'] {
-  max-width: 1272px;
+  max-width: var(--qugo-content-max);
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 40px 16px 0;
   box-sizing: border-box;
 }
 
