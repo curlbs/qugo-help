@@ -209,8 +209,11 @@ article img {
   padding: 28px 18px 16px 0;
 }
 
-/* Скругление подложки пунктов меню как в оглавлении (3-й уровень) */
-.menu__link {
+/* Скругление подложки пунктов меню как в оглавлении (3-й уровень):
+   обычные пункты, активные и плашка категории первого уровня */
+.menu__link,
+.menu__list-item-collapsible,
+.menu__list-item-collapsible .menu__link {
   border-radius: 8px;
 }
 
@@ -294,4 +297,21 @@ article img {
    Применяется к первому элементу контента — работает и на статьях, и на разделах */
 .theme-doc-breadcrumbs {
   margin-top: 28px;
+}
+
+/* Хлебные крошки без плашки: только цвет текста.
+   Неактивные — чёрные, активный — зелёный. Текст выровнен по контенту. */
+.breadcrumbs__link {
+  background: transparent;
+  padding: 0;
+  color: #2e2e2e;
+}
+.breadcrumbs__link:hover {
+  background: transparent;
+  color: var(--qugo-green);
+  text-decoration: none;
+}
+.breadcrumbs__item--active .breadcrumbs__link {
+  background: transparent;
+  color: var(--qugo-green);
 }
