@@ -21,6 +21,9 @@ const config: Config = {
     locales: ['ru'],
   },
 
+  // Гасит ошибки браузерных расширений (MetaMask и т.п.) в dev-оверлее
+  clientModules: ['./src/clientModules/suppressExtensionErrors.ts'],
+
   // Надёжная загрузка шрифта Inter на весь сайт
   stylesheets: [
     {
