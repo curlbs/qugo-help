@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: Формирование заданий
+sidebar_custom_props:
+  icon: /img/func/func-2.svg
 ---
 
 # Формирование заданий

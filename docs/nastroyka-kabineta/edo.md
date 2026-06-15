@@ -1,6 +1,8 @@
 ---
 sidebar_position: 5
 title: ЭДО с исполнителями
+sidebar_custom_props:
+  icon: /img/func/func-3.svg
 ---
 
 # Электронный документооборот с исполнителями

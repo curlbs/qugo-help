@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: Техническая поддержка
+sidebar_custom_props:
+  icon: /img/func/func-7.svg
 ---
 
 # Обращение в техническую поддержку

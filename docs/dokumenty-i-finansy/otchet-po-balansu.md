@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: Отчёт по балансу
+sidebar_custom_props:
+  icon: /img/func/func-3.svg
 ---
 
 # Отчёт по балансу

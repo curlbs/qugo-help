@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 title: Документы по исполнителям
+sidebar_custom_props:
+  icon: /img/func/func-2.svg
 ---
 
 # Закрывающие документы по исполнителям

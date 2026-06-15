@@ -1,6 +1,8 @@
 ---
 sidebar_position: 4
 title: Документы с платформой
+sidebar_custom_props:
+  icon: /img/func/func-3.svg
 ---
 
 # Закрывающие документы с платформой

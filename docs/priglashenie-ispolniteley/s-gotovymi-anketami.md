@@ -1,6 +1,8 @@
 ---
 sidebar_position: 4
 title: С готовыми анкетами
+sidebar_custom_props:
+  icon: /img/func/func-2.svg
 ---
 
 # Приглашение с готовыми анкетами

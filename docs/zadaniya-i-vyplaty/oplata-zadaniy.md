@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 title: Оплата заданий
+sidebar_custom_props:
+  icon: /img/func/func-1.svg
 ---
 
 # Оплата заданий

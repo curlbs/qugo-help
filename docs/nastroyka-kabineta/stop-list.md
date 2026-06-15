@@ -1,6 +1,8 @@
 ---
 sidebar_position: 4
 title: Стоп-лист исполнителей
+sidebar_custom_props:
+  icon: /img/func/func-2.svg
 ---
 
 # Стоп-лист исполнителей

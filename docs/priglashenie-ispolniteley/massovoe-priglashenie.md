@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 title: Массовое приглашение
+sidebar_custom_props:
+  icon: /img/func/func-6.svg
 ---
 
 # Массовое приглашение к регистрации

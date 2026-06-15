@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: Регистрация заказчика
+sidebar_custom_props:
+  icon: /img/func/func-6.svg
 ---
 
 # Регистрация заказчика на платформе

@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: По номеру телефона
+sidebar_custom_props:
+  icon: /img/func/func-5.svg
 ---
 
 # Индивидуальное приглашение по номеру телефона

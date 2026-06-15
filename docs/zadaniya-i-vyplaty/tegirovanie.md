@@ -1,6 +1,8 @@
 ---
 sidebar_position: 6
 title: Массовое тегирование
+sidebar_custom_props:
+  icon: /img/func/func-6.svg
 ---
 
 # Массовое тегирование исполнителей

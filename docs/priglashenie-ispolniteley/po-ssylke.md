@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: По ссылке
+sidebar_custom_props:
+  icon: /img/func/func-4.svg
 ---
 
 # Приглашение исполнителей по ссылке

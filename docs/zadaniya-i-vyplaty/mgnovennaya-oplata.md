@@ -1,6 +1,8 @@
 ---
 sidebar_position: 5
 title: Мгновенная оплата
+sidebar_custom_props:
+  icon: /img/func/func-1.svg
 ---
 
 # Формирование заданий с мгновенной оплатой

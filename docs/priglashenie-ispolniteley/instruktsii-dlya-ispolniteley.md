@@ -1,6 +1,8 @@
 ---
 sidebar_position: 5
 title: Инструкции для исполнителей
+sidebar_custom_props:
+  icon: /img/func/func-3.svg
 ---
 
 # Инструкции для исполнителей

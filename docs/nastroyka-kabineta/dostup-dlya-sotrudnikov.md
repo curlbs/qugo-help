@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 title: Доступ для сотрудников
+sidebar_custom_props:
+  icon: /img/func/func-5.svg
 ---
 
 # Предоставление доступа сотрудникам

@@ -1,6 +1,8 @@
 ---
 sidebar_position: 4
 title: Арбитраж (изменение стоимости)
+sidebar_custom_props:
+  icon: /img/func/func-4.svg
 ---
 
 # Оплата заданий с изменением стоимости (арбитраж)
