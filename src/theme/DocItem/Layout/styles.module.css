@@ -3,8 +3,10 @@
   margin-top: 0;
 }
 
+/* Контент статьи использует всю доступную ширину колонки (без узкого капа),
+   чтобы заполнялась правая часть страницы */
 @media (min-width: 997px) {
   .docItemCol {
-    max-width: 850px !important;
+    max-width: none !important;
   }
 }

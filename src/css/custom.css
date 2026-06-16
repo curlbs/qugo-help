@@ -12,8 +12,10 @@
   --qugo-gray-bg: #F6F6F6;
   --qugo-gray-text: #727272;
 
-  /* Максимальная ширина контента (единая для навбара, главной и документации) */
-  --qugo-content-max: 1360px;
+  /* Ширина контента и боковые отступы (единые для навбара, главной и документации).
+     Раскладка использует ширину экрана, ограничиваясь max на очень широких мониторах. */
+  --qugo-content-max: 1680px;
+  --qugo-gutter: 16px;
 
   /* Infima переопределения */
   --ifm-color-primary: #249E55;
@@ -116,15 +118,22 @@ textarea,
 .navbar__inner {
   max-width: var(--qugo-content-max);
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 var(--qugo-gutter);
 }
 /* Раскладка документации в том же контейнере — сайдбар начинается под логотипом.
    Без padding-top, чтобы сайдбар оставался закреплённым (sticky) при скролле */
 [class*='docRoot_'] {
   max-width: var(--qugo-content-max);
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 var(--qugo-gutter);
   box-sizing: border-box;
+}
+
+/* На десктопе — заметные боковые отступы, контент использует ширину экрана */
+@media (min-width: 997px) {
+  :root {
+    --qugo-gutter: 40px;
+  }
 }
 
 /* === Главная: прозрачный навбар (фон-подложка просвечивает) === */

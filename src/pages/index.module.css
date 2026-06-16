@@ -16,9 +16,9 @@
   background-repeat: no-repeat;
 }
 .heroInner {
-  max-width: var(--qugo-content-max, 1360px);
+  max-width: var(--qugo-content-max, 1680px);
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 var(--qugo-gutter, 16px);
   width: 100%;
   text-align: center;
 }
