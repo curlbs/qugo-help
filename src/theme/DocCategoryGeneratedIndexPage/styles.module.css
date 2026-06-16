@@ -1,0 +1,9 @@
+/* Без max-width: 75% — страница раздела использует всю ширину контента */
+.generatedIndexPage {
+  max-width: none;
+}
+
+.title {
+  --ifm-h1-font-size: 3rem;
+  margin-bottom: calc(1.25 * var(--ifm-leading));
+}

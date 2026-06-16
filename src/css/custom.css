@@ -134,6 +134,11 @@ textarea,
   :root {
     --qugo-gutter: 40px;
   }
+  /* Страницы разделов (generated-index) по умолчанию капятся 75% —
+     снимаем кап, чтобы карточки заполняли всю ширину контента */
+  [class*='docMainContainer'] [class*='generatedIndexPage'] {
+    max-width: none !important;
+  }
 }
 
 /* === Главная: прозрачный навбар (фон-подложка просвечивает) === */
