@@ -1,0 +1,8 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="33.7984" cy="34.4" r="4.6" transform="rotate(180 33.7984 34.4)" fill="url(#fav_dot)"/>
+<path d="M20 0C31.0457 0 40 8.9543 40 20C40 22.6736 39.4751 25.2246 38.5231 27.5558C38.3798 27.9068 37.9461 28.0211 37.6185 27.8301C36.4963 27.1757 35.1916 26.7999 33.7988 26.7998C29.6015 26.7998 26.1982 30.203 26.1982 34.4004C26.1983 35.6771 26.514 36.8798 27.0706 37.9358C27.2474 38.2713 27.1145 38.6998 26.7576 38.828C24.6467 39.586 22.3718 40 20 40C8.9543 40 0 31.0457 0 20C0 8.9543 8.9543 0 20 0Z" fill="url(#fav_q)"/>
+<defs>
+<linearGradient id="fav_dot" x1="33.7984" y1="29.8" x2="33.7984" y2="39" gradientUnits="userSpaceOnUse"><stop stop-color="#249E55"/><stop offset="1" stop-color="#3BBF70"/></linearGradient>
+<linearGradient id="fav_q" x1="20" y1="0" x2="20" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#249E55"/><stop offset="1" stop-color="#3BBF70"/></linearGradient>
+</defs>
+</svg>
