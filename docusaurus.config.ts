@@ -11,8 +11,11 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://help.qugo.ru',
-  baseUrl: '/',
+  url: 'https://curlbs.github.io',
+  baseUrl: '/qugo-help/',
+  organizationName: 'curlbs',
+  projectName: 'qugo-help',
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
 
