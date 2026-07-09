@@ -15,7 +15,6 @@ const config: Config = {
   baseUrl: '/qugo-help/',
   organizationName: 'curlbs',
   projectName: 'qugo-help',
-  trailingSlash: false,
 
   onBrokenLinks: 'throw',
 
